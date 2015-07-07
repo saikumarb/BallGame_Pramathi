@@ -110,21 +110,11 @@
          self.center = CGPointMake(self.center.x+addPos.x ,self.center.y+ addPos.y);
      }];
     
-//    CGPoint rootViewPoint = [self convertPoint:self.center toView:self.superview];
-
     
     if(self.center.x > self.superview.frame.size.width-(self.frame.size.width/2) || self.center.x+(self.frame.size.width) < self.superview.frame.origin.x)
         addPos.x = -addPos.x*self.velocity;
     if(self.center.y > self.superview.frame.size.height-(self.frame.size.height/2) || self.center.y+(self.frame.size.height)< self.superview.frame.origin.y)
         addPos.y = -addPos.y*self.velocity;
-    
-    
-    
-//    if(rootViewPoint.x > self.superview.frame.size.width-(self.frame.size.width/2) || rootViewPoint.x+(self.frame.size.width) < self.superview.frame.origin.x)
-//        addPos.x = -addPos.x*self.velocity;
-//    if(rootViewPoint.y > self.superview.frame.size.height-(self.frame.size.height/2) || rootViewPoint.y+(self.frame.size.height)< self.superview.frame.origin.y)
-//        addPos.y = -addPos.y*self.velocity;
-
     
 }
 
