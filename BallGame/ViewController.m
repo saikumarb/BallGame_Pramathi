@@ -58,7 +58,10 @@
 //Create ball on each touch event
 -(void)createBallAtTouchPoint:(CGPoint)touchPoint
 {
-    GameBall *gameBall = [[GameBall alloc] initWithFrame:CGRectMake(touchPoint.x-20, touchPoint.y-20, 40, 40)];
+    int width =40;
+    int height =40;
+    
+    GameBall *gameBall = [[GameBall alloc] initWithFrame:CGRectMake(touchPoint.x-(width/2), touchPoint.y-(height/2), width, height)];
     gameBall.ballState = gameState;
     gameBall.layer.cornerRadius =20.0;
     gameBall.layer.masksToBounds = YES;
