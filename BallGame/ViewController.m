@@ -21,7 +21,13 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     gameBallsArray = [[NSMutableArray alloc]init];
-    
+    [self addGameBoxview];
+    gameState = YES;
+}
+
+//Create box view 
+-(void)addGameBoxview
+{
     CGRect gameBoxFrame = self.view.frame;
     gameBoxFrame.origin.x = gameBoxFrame.origin.x+60;
     gameBoxFrame.origin.y = gameBoxFrame.origin.y+60;
@@ -29,10 +35,11 @@
     gameBoxFrame.size.height = gameBoxFrame.size.height-100;
     
     gameBoxView = [[UIView alloc] initWithFrame:gameBoxFrame];
+    // gameBoxView = [[UIView alloc] initWithFrame:CGRectMake(40, 40, 200, 300)];
+    
     gameBoxView.backgroundColor = [UIColor darkTextColor];
     [self.view addSubview:gameBoxView];
     
-    gameState = YES;
 }
 
 // Touches methos
